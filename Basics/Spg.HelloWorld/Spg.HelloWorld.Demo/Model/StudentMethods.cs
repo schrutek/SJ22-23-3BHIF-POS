@@ -24,11 +24,22 @@ namespace Spg.HelloWorld.Demo.Model
         }
 
         /// <summary>
-        /// Methode
+        /// Meine Save-Methode...
         /// </summary>
+        /// <remarks>
+        /// Beschreibung der Methode...
+        /// </remarks>
+        /// <exception cref="CouldNotSaveException">Beschreibung der Exception...</exception>
         public void Save()
         {
-
+            try
+            {
+                // Save...
+            }
+            catch (DbUpdateException ex)
+            {
+                throw new CouldNotSaveException("Speichern fehlgeschlagen!");
+            }
         }
     }
 }

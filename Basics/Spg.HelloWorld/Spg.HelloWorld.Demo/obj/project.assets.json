@@ -15,11 +15,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\HTL\\Unterricht\\SJ2223\\3BHIF\\Pos\\Basics\\Spg.HelloWorld\\Spg.HelloWorld.Demo\\Spg.HelloWorld.Demo.csproj",
+      "projectUniqueName": "C:\\HTL\\Unterricht\\SJ2223\\3BHIF\\Pos\\SJ22-23-3BHIF-POS\\Basics\\Spg.HelloWorld\\Spg.HelloWorld.Demo\\Spg.HelloWorld.Demo.csproj",
       "projectName": "Spg.HelloWorld.Demo",
-      "projectPath": "C:\\HTL\\Unterricht\\SJ2223\\3BHIF\\Pos\\Basics\\Spg.HelloWorld\\Spg.HelloWorld.Demo\\Spg.HelloWorld.Demo.csproj",
+      "projectPath": "C:\\HTL\\Unterricht\\SJ2223\\3BHIF\\Pos\\SJ22-23-3BHIF-POS\\Basics\\Spg.HelloWorld\\Spg.HelloWorld.Demo\\Spg.HelloWorld.Demo.csproj",
       "packagesPath": "C:\\Users\\marti\\.nuget\\packages\\",
-      "outputPath": "C:\\HTL\\Unterricht\\SJ2223\\3BHIF\\Pos\\Basics\\Spg.HelloWorld\\Spg.HelloWorld.Demo\\obj\\",
+      "outputPath": "C:\\HTL\\Unterricht\\SJ2223\\3BHIF\\Pos\\SJ22-23-3BHIF-POS\\Basics\\Spg.HelloWorld\\Spg.HelloWorld.Demo\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

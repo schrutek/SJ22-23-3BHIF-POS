@@ -35,7 +35,5 @@ namespace Spg.HelloWorld.Demo.Model
                 }
             }
         }
-
-
     }
 }
