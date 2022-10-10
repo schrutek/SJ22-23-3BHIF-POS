@@ -106,11 +106,39 @@ string _dateString = "08 07 2021";
 Console.WriteLine(xy);
 
 
-SchoolClass schoolClass = new SchoolClass("3BHIF");
-//schoolClass.Name = "";
-schoolClass.MaxStudents = 30;
+SchoolClass schoolClass = new SchoolClass() { Name = "3BHIF", MaxStudents = 30 };
+schoolClass.Name = "12BHIF";
+
+List<SchoolClass> schoolClasses = new List<SchoolClass>()
+{
+    new SchoolClass() { Name = "3BHIF", MaxStudents = 28 },
+    new SchoolClass() { Name = "4BHIF", MaxStudents=15 },
+    new SchoolClass() 
+    { 
+        Name = "5BHIF", 
+        MaxStudents=15,
+        Students = new List<Student>()
+        {
+            new Student() { FirstName="Student01", LastName="StudentLastName01", Gender=Genders.Female },
+            new Student() { FirstName="Student02", LastName="StudentLastName02", Gender=Genders.Female },
+            new Student() { FirstName="Student03", LastName="StudentLastName03", Gender=Genders.Female },
+            new Student() { FirstName="Student04", LastName="StudentLastName04", Gender=Genders.Female },
+            new Student() { FirstName="Student05", LastName="StudentLastName05", Gender=Genders.Female },
+            new Student() { FirstName="Student06", LastName="StudentLastName06", Gender=Genders.Female },
+        }
+    },
+    new SchoolClass() { Name = "6BHIF", MaxStudents=15 },
+    new SchoolClass() { Name = "7BHIF", MaxStudents=15 }
+};
+
+PhilipList<Student> philipList = new PhilipList<Student>()
+{
+     new Student() { FirstName="Student06", LastName="StudentLastName06", Gender=Genders.Female },
+};
 
 Console.WriteLine(schoolClass.MaxStudents);
+
+
 
 
 

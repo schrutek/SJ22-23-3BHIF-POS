@@ -8,14 +8,19 @@ namespace Spg.HelloWorld.Demo.Model
 {
     public class SchoolClass
     {
-        public string Name { get; private set; } = "3BHIF";
+        public string Name { get; init; } = "3BHIF";
 
         private int _maxStudents;
 
-        public SchoolClass(string name)
-        {
-            Name = name;
-        }
+        //public SchoolClass(string name)
+        //{
+        //    Name = name;
+        //}
+
+        public SchoolClass()
+        { }
+
+        public List<Student> Students { get; set; }
 
         public int MaxStudents
         {
