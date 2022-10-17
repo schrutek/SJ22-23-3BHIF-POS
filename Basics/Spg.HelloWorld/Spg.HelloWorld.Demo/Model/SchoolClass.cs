@@ -20,7 +20,7 @@ namespace Spg.HelloWorld.Demo.Model
         public SchoolClass()
         { }
 
-        public List<Student> Students { get; set; }
+        public IEnumerable<Student> Students { get; set; } = new List<Student>();
 
         public int MaxStudents
         {
@@ -40,7 +40,7 @@ namespace Spg.HelloWorld.Demo.Model
 
         public void SetName(string name)
         {
-            Name = name;
+            //Name = name;
         }
     }
 }

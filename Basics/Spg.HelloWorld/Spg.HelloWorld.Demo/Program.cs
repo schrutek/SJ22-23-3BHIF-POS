@@ -1,4 +1,5 @@
 ﻿// See https://aka.ms/new-console-template for more information
+using Spg.HelloWorld.Demo;
 using Spg.HelloWorld.Demo.Model;
 using System.Reflection;
 
@@ -107,7 +108,7 @@ Console.WriteLine(xy);
 
 
 SchoolClass schoolClass = new SchoolClass() { Name = "3BHIF", MaxStudents = 30 };
-schoolClass.Name = "12BHIF";
+//schoolClass.Name = "12BHIF";
 
 List<SchoolClass> schoolClasses = new List<SchoolClass>()
 {
@@ -131,6 +132,35 @@ List<SchoolClass> schoolClasses = new List<SchoolClass>()
     new SchoolClass() { Name = "7BHIF", MaxStudents=15 }
 };
 
+foreach (SchoolClass item in schoolClasses)
+{
+    Console.WriteLine($"Name: {item.Name}, Studierende: {item.Students.ToList().Count}");
+}
+
+SchoolClass schoolClass1 = new SchoolClass() { Name = "8BHIF", MaxStudents = 30 };
+SchoolClass schoolClass2 = new SchoolClass() { Name = "9BHIF", MaxStudents = 30 };
+
+
+
+
+
+IDictionary<string, Student> personDict = new Dictionary<string, Student>();
+personDict.Add("One", new Student() { Id = 1, FirstName = "Zuname1", LastName = "Vorname1" });
+personDict.Add("Two", new Student() { Id = 2, FirstName = "Zuname2", LastName = "Vorname2" });
+personDict.Add("Three", new Student() { Id = 3, FirstName = "Zuname3", LastName = "Vorname3" });
+
+Student s6 = personDict["Two"];
+
+
+
+
+
+schoolClasses.Add(schoolClass1);
+schoolClasses.Add(schoolClass1);
+schoolClasses.Add(schoolClass1);
+
+schoolClasses.Remove(schoolClass1);
+
 PhilipList<Student> philipList = new PhilipList<Student>()
 {
      new Student() { FirstName="Student06", LastName="StudentLastName06", Gender=Genders.Female },
@@ -138,11 +168,26 @@ PhilipList<Student> philipList = new PhilipList<Student>()
 
 Console.WriteLine(schoolClass.MaxStudents);
 
+int[] intArray = new int[] { 1, 2, 3, 4, 5, 6 };
+
+string s2 = "Hello World and whatever!";
+string[] s3 = s2.Split(' ');
+Console.WriteLine(s3[2]);
 
 
+string s8 = "HelLo World!"[..];
 
 
+MyStudentList<Student> myStudentList = new MyStudentList<Student>()
+{
+    new Student() { FirstName="Student10", LastName="StudentLastName10", Gender=Genders.Female },
+    new Student() { FirstName="Student11", LastName="StudentLastName11", Gender=Genders.Female },
+    new Student() { FirstName="Student12", LastName="StudentLastName12", Gender=Genders.Female },
+};
 
+Student foundStudent = myStudentList["Student11"];
+
+Console.ReadLine();
 
 static Halabulu MyParse(string p)
 {

@@ -21,6 +21,15 @@ namespace Spg.HelloWorld.Demo.Model
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public Genders Gender { get; set; } // 0=Male, 1=Female, 2=Other
+        
+        public string Kuerzel 
+        {
+            get
+            {
+                return LastName?[..3]?.ToUpper() ?? string.Empty;
+            }
+
+        }
 
         public int myVar;
 

@@ -23,7 +23,8 @@ namespace Spg.HelloWorld.Demo.Model
 
         public int Add(object? value)
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
+            return 1;
         }
 
         public void Clear()
