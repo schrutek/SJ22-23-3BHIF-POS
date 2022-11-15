@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "dMqhVgPE4puA+mMc/Qq3XA0+Yi0/uyGHUuE8tdq4OQEMAEaB3kb8I04tMYAmY95gjDeQIZMlb3Dkc6Hho3d1Qg==",
+  "dgSpecHash": "g3KHFnJXLs3SkzVd6YD7AG7fiEMHZkFjsGYpq/BegRZhBVIX09m3DUN1mATA8XYWXM5tebBxQ4++fe0Uuq8R6Q==",
   "success": true,
   "projectFilePath": "C:\\HTL\\Unterricht\\SJ2223\\3BHIF\\Pos\\SJ22-23-3BHIF-POS\\Basics\\Spg.HelloWorld\\Spg.HelloWorld.Demo\\Spg.HelloWorld.Demo.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\marti\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+  ],
   "logs": []
 }

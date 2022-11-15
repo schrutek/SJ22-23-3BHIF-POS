@@ -1,0 +1,17 @@
+C:\HTL\Unterricht\SJ2223\3BHIF\Pos\Spg.CollectionExercise\src\Spg.CollectionExercise.App\bin\Debug\net6.0\Spg.CollectionExercise.App.exe
+C:\HTL\Unterricht\SJ2223\3BHIF\Pos\Spg.CollectionExercise\src\Spg.CollectionExercise.App\bin\Debug\net6.0\Spg.CollectionExercise.App.deps.json
+C:\HTL\Unterricht\SJ2223\3BHIF\Pos\Spg.CollectionExercise\src\Spg.CollectionExercise.App\bin\Debug\net6.0\Spg.CollectionExercise.App.runtimeconfig.json
+C:\HTL\Unterricht\SJ2223\3BHIF\Pos\Spg.CollectionExercise\src\Spg.CollectionExercise.App\bin\Debug\net6.0\Spg.CollectionExercise.App.dll
+C:\HTL\Unterricht\SJ2223\3BHIF\Pos\Spg.CollectionExercise\src\Spg.CollectionExercise.App\bin\Debug\net6.0\Spg.CollectionExercise.App.pdb
+C:\HTL\Unterricht\SJ2223\3BHIF\Pos\Spg.CollectionExercise\src\Spg.CollectionExercise.App\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\HTL\Unterricht\SJ2223\3BHIF\Pos\Spg.CollectionExercise\src\Spg.CollectionExercise.App\obj\Debug\net6.0\Spg.CollectionExercise.App.csproj.AssemblyReference.cache
+C:\HTL\Unterricht\SJ2223\3BHIF\Pos\Spg.CollectionExercise\src\Spg.CollectionExercise.App\obj\Debug\net6.0\Spg.CollectionExercise.App.GeneratedMSBuildEditorConfig.editorconfig
+C:\HTL\Unterricht\SJ2223\3BHIF\Pos\Spg.CollectionExercise\src\Spg.CollectionExercise.App\obj\Debug\net6.0\Spg.CollectionExercise.App.AssemblyInfoInputs.cache
+C:\HTL\Unterricht\SJ2223\3BHIF\Pos\Spg.CollectionExercise\src\Spg.CollectionExercise.App\obj\Debug\net6.0\Spg.CollectionExercise.App.AssemblyInfo.cs
+C:\HTL\Unterricht\SJ2223\3BHIF\Pos\Spg.CollectionExercise\src\Spg.CollectionExercise.App\obj\Debug\net6.0\Spg.CollectionExercise.App.csproj.CoreCompileInputs.cache
+C:\HTL\Unterricht\SJ2223\3BHIF\Pos\Spg.CollectionExercise\src\Spg.CollectionExercise.App\obj\Debug\net6.0\Spg.CollectionExercise.App.csproj.CopyComplete
+C:\HTL\Unterricht\SJ2223\3BHIF\Pos\Spg.CollectionExercise\src\Spg.CollectionExercise.App\obj\Debug\net6.0\Spg.CollectionExercise.App.dll
+C:\HTL\Unterricht\SJ2223\3BHIF\Pos\Spg.CollectionExercise\src\Spg.CollectionExercise.App\obj\Debug\net6.0\refint\Spg.CollectionExercise.App.dll
+C:\HTL\Unterricht\SJ2223\3BHIF\Pos\Spg.CollectionExercise\src\Spg.CollectionExercise.App\obj\Debug\net6.0\Spg.CollectionExercise.App.pdb
+C:\HTL\Unterricht\SJ2223\3BHIF\Pos\Spg.CollectionExercise\src\Spg.CollectionExercise.App\obj\Debug\net6.0\Spg.CollectionExercise.App.genruntimeconfig.cache
+C:\HTL\Unterricht\SJ2223\3BHIF\Pos\Spg.CollectionExercise\src\Spg.CollectionExercise.App\obj\Debug\net6.0\ref\Spg.CollectionExercise.App.dll

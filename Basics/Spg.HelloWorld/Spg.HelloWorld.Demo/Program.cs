@@ -5,7 +5,7 @@ using System.Reflection;
 
 Console.WriteLine("Hello, World!");
 
-Student student = new Student();
+Student student = new Student("");
 student.FirstName = null;
 student.LastName = "Schrutek";
 student.Gender = Genders.Female;
@@ -120,12 +120,12 @@ List<SchoolClass> schoolClasses = new List<SchoolClass>()
         MaxStudents=15,
         Students = new List<Student>()
         {
-            new Student() { FirstName="Student01", LastName="StudentLastName01", Gender=Genders.Female },
-            new Student() { FirstName="Student02", LastName="StudentLastName02", Gender=Genders.Female },
-            new Student() { FirstName="Student03", LastName="StudentLastName03", Gender=Genders.Female },
-            new Student() { FirstName="Student04", LastName="StudentLastName04", Gender=Genders.Female },
-            new Student() { FirstName="Student05", LastName="StudentLastName05", Gender=Genders.Female },
-            new Student() { FirstName="Student06", LastName="StudentLastName06", Gender=Genders.Female },
+            new Student("") { FirstName="Student01", LastName="StudentLastName01", Gender=Genders.Female },
+            new Student("") { FirstName="Student02", LastName="StudentLastName02", Gender=Genders.Female },
+            new Student("") { FirstName="Student03", LastName="StudentLastName03", Gender=Genders.Female },
+            new Student("") { FirstName="Student04", LastName="StudentLastName04", Gender=Genders.Female },
+            new Student("") { FirstName="Student05", LastName="StudentLastName05", Gender=Genders.Female },
+            new Student("") { FirstName="Student06", LastName="StudentLastName06", Gender=Genders.Female },
         }
     },
     new SchoolClass() { Name = "6BHIF", MaxStudents=15 },
@@ -145,9 +145,9 @@ SchoolClass schoolClass2 = new SchoolClass() { Name = "9BHIF", MaxStudents = 30 
 
 
 IDictionary<string, Student> personDict = new Dictionary<string, Student>();
-personDict.Add("One", new Student() { Id = 1, FirstName = "Zuname1", LastName = "Vorname1" });
-personDict.Add("Two", new Student() { Id = 2, FirstName = "Zuname2", LastName = "Vorname2" });
-personDict.Add("Three", new Student() { Id = 3, FirstName = "Zuname3", LastName = "Vorname3" });
+personDict.Add("One", new Student("") { Id = 1, FirstName = "Zuname1", LastName = "Vorname1" });
+personDict.Add("Two", new Student("") { Id = 2, FirstName = "Zuname2", LastName = "Vorname2" });
+personDict.Add("Three", new Student("") { Id = 3, FirstName = "Zuname3", LastName = "Vorname3" });
 
 Student s6 = personDict["Two"];
 
@@ -163,7 +163,7 @@ schoolClasses.Remove(schoolClass1);
 
 PhilipList<Student> philipList = new PhilipList<Student>()
 {
-     new Student() { FirstName="Student06", LastName="StudentLastName06", Gender=Genders.Female },
+     new Student("") { FirstName="Student06", LastName="StudentLastName06", Gender=Genders.Female },
 };
 
 Console.WriteLine(schoolClass.MaxStudents);
@@ -178,14 +178,14 @@ Console.WriteLine(s3[2]);
 string s8 = "HelLo World!"[..];
 
 
-MyStudentList<Student> myStudentList = new MyStudentList<Student>()
-{
-    new Student() { FirstName="Student10", LastName="StudentLastName10", Gender=Genders.Female },
-    new Student() { FirstName="Student11", LastName="StudentLastName11", Gender=Genders.Female },
-    new Student() { FirstName="Student12", LastName="StudentLastName12", Gender=Genders.Female },
-};
+//MyStudentList<Student> myStudentList = new MyStudentList<Student>()
+//{
+//    new Student("") { FirstName="Student10", LastName="StudentLastName10", Gender=Genders.Female },
+//    new Student("") { FirstName="Student11", LastName="StudentLastName11", Gender=Genders.Female },
+//    new Student("") { FirstName="Student12", LastName="StudentLastName12", Gender=Genders.Female },
+//};
 
-Student foundStudent = myStudentList["Student11"];
+//Student foundStudent = myStudentList["Student11"];
 
 Console.ReadLine();
 

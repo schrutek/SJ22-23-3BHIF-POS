@@ -17,6 +17,7 @@ namespace Spg.HelloWorld.Demo.Model
     public partial class Student : EntityBase
     {
         private string _name;
+        public int Id { get; set; }
 
         public string FirstName { get; set; }
         public string LastName { get; set; }
@@ -43,6 +44,11 @@ namespace Spg.HelloWorld.Demo.Model
                     myVar = value;
                 }
             }
+        }
+
+        public Student(string name)
+        {
+
         }
     }
 }

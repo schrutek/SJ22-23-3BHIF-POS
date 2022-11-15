@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32929.385
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Spg.CollectionExercise.App", "src\Spg.CollectionExercise.App\Spg.CollectionExercise.App.csproj", "{54BB908F-D558-407A-87B5-53AF95CEB1CC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{54BB908F-D558-407A-87B5-53AF95CEB1CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54BB908F-D558-407A-87B5-53AF95CEB1CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54BB908F-D558-407A-87B5-53AF95CEB1CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54BB908F-D558-407A-87B5-53AF95CEB1CC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9D0A728A-268F-4E9F-9743-86EBB7442C11}
+	EndGlobalSection
+EndGlobal

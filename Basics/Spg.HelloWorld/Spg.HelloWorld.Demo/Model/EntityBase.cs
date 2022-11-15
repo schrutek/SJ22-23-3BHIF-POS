@@ -14,5 +14,7 @@ namespace Spg.HelloWorld.Demo.Model
         /// </summary>
         [Key]
         public int Id { get; set; }
+        public DateTime LastChangeDate { get; set; }
+        public int LastChangeUserId { get; set; }
     }
 }
