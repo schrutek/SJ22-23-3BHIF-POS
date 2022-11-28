@@ -8,6 +8,10 @@ namespace Spg.HelloWorld.Demo.Model.Vererbung
 {
     public class JumboJet : Fluggerät
     {
+        public JumboJet(string hersteller, int anzahlPassagiere) : base(hersteller, anzahlPassagiere)
+        {
+        }
+
         public override void Starten()
         {
             // beschleunigt auf 350kmh, langsames abheben

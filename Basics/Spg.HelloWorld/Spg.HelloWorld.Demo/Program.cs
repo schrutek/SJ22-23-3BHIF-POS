@@ -1,7 +1,10 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using Spg.HelloWorld.Demo;
+using Spg.HelloWorld.Demo.Delegates;
 using Spg.HelloWorld.Demo.Model;
 using System.Reflection;
+using System.Reflection.Metadata.Ecma335;
+using System.Runtime.CompilerServices;
 
 Console.WriteLine("Hello, World!");
 
@@ -186,6 +189,48 @@ string s8 = "HelLo World!"[..];
 //};
 
 //Student foundStudent = myStudentList["Student11"];
+
+Console.WriteLine("----------------------------------");
+OldSchool p = new();
+p.DoSomeWork();
+
+StudentList myStudentList = new StudentList()
+{
+    new Student("") { FirstName="AStudent01", LastName="AStudentLastName01", Gender=Genders.Female },
+    new Student("") { FirstName="AStudent02", LastName="AStudentLastName02", Gender=Genders.Female },
+    new Student("") { FirstName="BStudent03", LastName="BStudentLastName03", Gender=Genders.Female },
+    new Student("") { FirstName="BStudent04", LastName="BStudentLastName04", Gender=Genders.Female },
+    new Student("") { FirstName="BStudent10", LastName="BStudentLastName10", Gender=Genders.Female },
+    new Student("") { FirstName="AStudent11", LastName="AStudentLastName11", Gender=Genders.Female },
+    new Student("") { FirstName="CStudent12", LastName="CStudentLastName12", Gender=Genders.Female },
+};
+
+List<Student> resultList = myStudentList.Filter(s => s.LastName.StartsWith("A"));
+
+
+
+
+
+
+
+foreach (Student item in resultList)
+{
+    Console.WriteLine(item.ToString());
+}
+bool FirstNameStratsWith(Student s)
+{
+    return s.LastName.StartsWith("A");
+}
+
+bool LastNameEndsWith(Student s)
+{
+    return s.LastName.EndsWith("2");
+}
+
+bool LastNameContains(Student s)
+{
+    return s.LastName.Contains("0");
+}
 
 Console.ReadLine();
 

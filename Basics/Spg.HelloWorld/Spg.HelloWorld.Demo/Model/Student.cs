@@ -50,5 +50,10 @@ namespace Spg.HelloWorld.Demo.Model
         {
 
         }
+
+        public override string ToString()
+        {
+            return $"{FirstName} - {LastName}";
+        }
     }
 }

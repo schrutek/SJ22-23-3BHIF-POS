@@ -8,6 +8,10 @@ namespace Spg.HelloWorld.Demo.Model.Vererbung
 {
     public class Heissluftballon : Fluggerät
     {
+        public Heissluftballon(string hersteller, int anzahlPassagiere) : base(hersteller, anzahlPassagiere)
+        {
+        }
+
         public override void Landen()
         {
             throw new NotImplementedException();
