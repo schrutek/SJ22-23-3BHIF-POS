@@ -58,11 +58,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\HTL\\Unterricht\\SJ2223\\3BHIF\\Pos\\Spg.CollectionExercise\\src\\Spg.CollectionExercise.App\\Spg.CollectionExercise.App.csproj",
+      "projectUniqueName": "C:\\HTL\\Unterricht\\SJ2223\\3BHIF\\Pos\\SJ22-23-3BHIF-POS\\Spg.CollectionExercise\\src\\Spg.CollectionExercise.App\\Spg.CollectionExercise.App.csproj",
       "projectName": "Spg.CollectionExercise.App",
-      "projectPath": "C:\\HTL\\Unterricht\\SJ2223\\3BHIF\\Pos\\Spg.CollectionExercise\\src\\Spg.CollectionExercise.App\\Spg.CollectionExercise.App.csproj",
+      "projectPath": "C:\\HTL\\Unterricht\\SJ2223\\3BHIF\\Pos\\SJ22-23-3BHIF-POS\\Spg.CollectionExercise\\src\\Spg.CollectionExercise.App\\Spg.CollectionExercise.App.csproj",
       "packagesPath": "C:\\Users\\marti\\.nuget\\packages\\",
-      "outputPath": "C:\\HTL\\Unterricht\\SJ2223\\3BHIF\\Pos\\Spg.CollectionExercise\\src\\Spg.CollectionExercise.App\\obj\\",
+      "outputPath": "C:\\HTL\\Unterricht\\SJ2223\\3BHIF\\Pos\\SJ22-23-3BHIF-POS\\Spg.CollectionExercise\\src\\Spg.CollectionExercise.App\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

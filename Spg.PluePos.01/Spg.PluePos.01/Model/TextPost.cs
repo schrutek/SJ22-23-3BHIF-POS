@@ -22,7 +22,7 @@ namespace Spg.PluePos._01.Model
                 }
                 else
                 {
-                    return "$<h1>{Title}</h1><p>{Content}</p>";
+                    return $"<h1>{Title}</h1><p>{Content}</p>";
                 }
             }
         }

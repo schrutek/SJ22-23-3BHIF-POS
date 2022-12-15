@@ -116,7 +116,7 @@ namespace ExCollection.App
             Console.WriteLine(JsonConvert.SerializeObject(klassen["3BHIF"].Schuelers));
             Console.WriteLine($"s sitzt in der Klasse {s.KlasseNavigation.Name} mit dem KV {s.KlasseNavigation.KV}.");
 
-
+            Console.ReadLine();
         }
     }
 }

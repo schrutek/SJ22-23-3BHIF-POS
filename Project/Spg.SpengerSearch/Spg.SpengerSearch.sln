@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33103.184
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Spg.SpengerSearch.DomainModel", "Spg.SpengerSearch.DomainModel\Spg.SpengerSearch.DomainModel.csproj", "{9744844E-E337-4A44-8D56-E2696E556FE7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9744844E-E337-4A44-8D56-E2696E556FE7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9744844E-E337-4A44-8D56-E2696E556FE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9744844E-E337-4A44-8D56-E2696E556FE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9744844E-E337-4A44-8D56-E2696E556FE7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C3BD7F26-5DCC-4CB6-B558-C967F19C7895}
+	EndGlobalSection
+EndGlobal

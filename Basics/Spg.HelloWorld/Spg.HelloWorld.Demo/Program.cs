@@ -211,8 +211,6 @@ List<Student> resultList = myStudentList.Filter(s => s.LastName.StartsWith("A"))
 
 
 
-
-
 foreach (Student item in resultList)
 {
     Console.WriteLine(item.ToString());
