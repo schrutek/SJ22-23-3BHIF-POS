@@ -10,5 +10,8 @@ namespace Spg.SpengerSearch.DomainModel.Model
     {
         public string Key { get; set; } = string.Empty;
         public string Description { get; set; } = string.Empty;
+
+        private List<Category> _categories = new();
+        public IReadOnlyList<Category> Categories => _categories;
     }
 }

@@ -12,10 +12,11 @@ namespace Spg.SpengerSearch.DomainModel
         public void DoSomething()
         {
             // Products der Category werden aus der DB geladen
-            Category category = db.Find("Category1"); // select * from Categories where name = 'Category1'
-            foreach (Product item in category.Products)
-            {
+            //Category category = db.Find("Category1"); // select * from Categories where name = 'Category1'
+            //foreach (Product item in category.Products)
+            //{
                 
-            }
-    } }
+            //}
+        } 
+    }
 }

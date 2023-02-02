@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -10,6 +11,17 @@ namespace Spg.SpengerSearch.DomainModel.Model
 
     public class Customer
     {
+        public int Id { get; private set; }
+        public GenderTypes Gender { get; set; }
+        public string FirstName { get; set; } = string.Empty;
+        public string LastName { get; set; } = string.Empty;
+        public string EMail { get; private set; } = string.Empty;
+        public DateTime? RegistrationDateTime { get; private set; }
+        public string SocialSecurityNumber { get; private set; } = string.Empty;
+        public Address Address { get; set; } = default!;
+
+        protected Customer()
+        { }
         public Customer(GenderTypes gender, string firstName, string lastName, string eMail, DateTime? registrationDateTime, string socialSecurityNumber)
         {
             Gender = gender;
@@ -19,12 +31,5 @@ namespace Spg.SpengerSearch.DomainModel.Model
             RegistrationDateTime = registrationDateTime;
             SocialSecurityNumber = socialSecurityNumber;
         }
-
-        public GenderTypes Gender { get; set; }
-        public string FirstName { get; set; } = string.Empty;
-        public string LastName { get; set; } = string.Empty;
-        public string EMail { get; private set; } = string.Empty;
-        public DateTime? RegistrationDateTime { get; private set; }
-        public string SocialSecurityNumber { get; private set; } = string.Empty;
     }
 }
