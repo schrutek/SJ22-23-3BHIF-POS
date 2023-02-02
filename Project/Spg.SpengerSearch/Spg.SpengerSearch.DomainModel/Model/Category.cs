@@ -12,19 +12,24 @@ namespace Spg.SpengerSearch.DomainModel.Model
         public string Name { get; set; }
         public DateTime ExiryDate { get; set; }
 
+        public int CategoryTypeNavigationId { get; private set; } = default!;
         public CategoryType CategoryTypeNavigation { get; private set; } = default!;
+
+        public int ShopNavigationId { get; private set; } = default!;
+        public Shop ShopNavigation { get; private set; } = default!;
+
 
         private List<Product> _products = new();
         public IReadOnlyList<Product> Products => _products;
 
         protected Category()
         { }
-        public Category(int id, CategoryType categoryTypeNavigation, string name, DateTime exiryDate)
+        public Category(CategoryType categoryTypeNavigation, Shop shop, string name, DateTime exiryDate)
         {
-            Id = id;
             CategoryTypeNavigation = categoryTypeNavigation;
             Name = name;
             ExiryDate = exiryDate;
+            ShopNavigation = shop;
         }
 
     }

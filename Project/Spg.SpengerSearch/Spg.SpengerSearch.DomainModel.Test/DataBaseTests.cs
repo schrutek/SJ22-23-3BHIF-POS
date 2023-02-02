@@ -19,7 +19,6 @@ namespace Spg.SpengerSearch.DomainModel.Test
             return db;
         }
 
-        [Fact]
         public void Generate_Database()
         {
             // Arrange
@@ -31,6 +30,23 @@ namespace Spg.SpengerSearch.DomainModel.Test
             SpengerSearchContext db = new SpengerSearchContext(options.Options);
             db.Database.EnsureDeleted();
             db.Database.EnsureCreated();
+
+            // Assert (wird nicht benötigt)
+        }
+
+        [Fact]
+        public void Generate_Database_Seed()
+        {
+            // Arrange
+            DbContextOptionsBuilder options = new DbContextOptionsBuilder();
+            //options.UseSqlite("Data Source=[serverip/port/instanz] [databasename] user id=[username] password=[geheim!]");
+            options.UseSqlite("Data Source=./../../../SpengerSearch.db");
+
+            // Act
+            SpengerSearchContext db = new SpengerSearchContext(options.Options);
+            db.Database.EnsureDeleted();
+            db.Database.EnsureCreated();
+            db.Seed();
 
             // Assert (wird nicht benötigt)
         }

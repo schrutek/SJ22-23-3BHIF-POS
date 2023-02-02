@@ -27,5 +27,8 @@ namespace Spg.SpengerSearch.DomainModel.Model
         public string CatchPhrase { get; set; } = string.Empty;
         public string Bs { get; set; } = string.Empty;
         public Address Address { get; set; } = default!;
+
+        private List<Category> _categories = new();
+        public IReadOnlyList<Category> Categories => _categories;
     }
 }

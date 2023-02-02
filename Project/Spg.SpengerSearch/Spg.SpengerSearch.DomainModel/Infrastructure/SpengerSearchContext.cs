@@ -62,15 +62,60 @@ namespace Spg.SpengerSearch.DomainModel.Infrastructure
 
         public void Seed()
         {
-            Randomizer.Seed = new Random(140237);
+            Randomizer.Seed = new Random(125620);
 
             List<Shop> shops = new Faker<Shop>().Rules((f, s) =>
             {
                 s.Name = f.Company.CompanyName();
                 s.CompanySuffix = f.Company.CompanySuffix();
             })
+            .Generate(10);
+
+            Shops.AddRange(shops); // Generiert 10 Insert-Queries
+            SaveChanges(); // Speichert alle Shops in die DB (Tranbsaction)
+
+            string[] categoryNames = new Faker().Commerce.Categories(20);
+
+            List<CategoryType> categoryTypes = new(); // TODO: Durch Faker ersetzen
+
+            List<Category> categories = new Faker<Category>()
+                .CustomInstantiator(f =>
+                new Category(
+                    categoryTypes[1],
+                    f.Random.ListItem(shops),
+                    f.Commerce.Categories(1).First(),
+                    f.Date.Between(DateTime.Now.AddMonths(2), DateTime.Now.AddMonths(12))))
+                .Rules((f, c) =>
+            {
+                //// Mit ArrayElement:
+                //c.Name = f.Random.ArrayElement(categoryNames);
+
+                //// Alternative:
+                //c.Name = f.Commerce.Categories(1).First();
+            })
             .Generate(10)
+            .GroupBy(c => c.Name)
+            .First()
             .ToList();
+
+            Categories.AddRange(categories);
+            SaveChanges();
+
+            //string[] department = new string[] { "HIF", "KIF", "WIT", "HBGM", "HKUI", "AIF", "FIT" };
+
+            List<Customer> customers = new Faker<Customer>().Rules((f, s) =>
+            {
+                s.Gender = f.Random.Enum<GenderTypes>();
+                s.FirstName = f.Name.FirstName(Bogus.DataSets.Name.Gender.Male);
+                if (s.Gender == GenderTypes.FEMALE)
+                {
+                    s.FirstName = f.Name.FirstName(Bogus.DataSets.Name.Gender.Female);
+                }
+            })
+            .Generate(50);
+
+            Customers.AddRange(customers);
+            SaveChanges();
         }
     }
 }
