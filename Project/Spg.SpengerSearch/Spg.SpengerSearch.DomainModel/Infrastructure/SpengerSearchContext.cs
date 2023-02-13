@@ -54,6 +54,7 @@ namespace Spg.SpengerSearch.DomainModel.Infrastructure
             modelBuilder.Entity<Shop>().OwnsOne(p => p.Address);
 
             modelBuilder.Entity<Category>().HasMany(c => c.Products);
+            modelBuilder.Entity<Product>().HasOne(p => p.CategoryNavigation);
 
             modelBuilder.Entity<Product>().HasIndex(p => new { p.Description, p.Ean13 });
 

@@ -7,7 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Spg.SpengerSearch.DomainMod
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Spg.SpengerSearch.DomainModel.Test", "Spg.SpengerSearch.DomainModel.Test\Spg.SpengerSearch.DomainModel.Test.csproj", "{7DCCF3D4-3715-4341-8391-A150FE2B44FB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Spg.SpengerSearch.UnitTests", "Spg.SpengerSearch.UnitTests\Spg.SpengerSearch.UnitTests.csproj", "{903756AF-F200-4B0A-B3F5-12FC3A3FF7C0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Spg.SpengerSearch.UnitTests", "Spg.SpengerSearch.UnitTests\Spg.SpengerSearch.UnitTests.csproj", "{903756AF-F200-4B0A-B3F5-12FC3A3FF7C0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Spg.SpengerSearch.LinQDemo", "Spg.SpengerSearch.LinQDemo\Spg.SpengerSearch.LinQDemo.csproj", "{9DF6DA91-1599-4081-BCCE-161D21C60EED}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{903756AF-F200-4B0A-B3F5-12FC3A3FF7C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{903756AF-F200-4B0A-B3F5-12FC3A3FF7C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{903756AF-F200-4B0A-B3F5-12FC3A3FF7C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9DF6DA91-1599-4081-BCCE-161D21C60EED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9DF6DA91-1599-4081-BCCE-161D21C60EED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9DF6DA91-1599-4081-BCCE-161D21C60EED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9DF6DA91-1599-4081-BCCE-161D21C60EED}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
