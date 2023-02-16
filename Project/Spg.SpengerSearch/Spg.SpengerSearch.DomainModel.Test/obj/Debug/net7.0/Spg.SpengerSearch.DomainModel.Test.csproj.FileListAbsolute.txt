@@ -140,3 +140,4 @@ C:\HTL\Unterricht\SJ2223\3BHIF\Pos\SJ22-23-3BHIF-POS\Project\Spg.SpengerSearch\S
 C:\HTL\Unterricht\SJ2223\3BHIF\Pos\SJ22-23-3BHIF-POS\Project\Spg.SpengerSearch\Spg.SpengerSearch.DomainModel.Test\obj\Debug\net7.0\Spg.SpengerSearch.DomainModel.Test.pdb
 C:\HTL\Unterricht\SJ2223\3BHIF\Pos\SJ22-23-3BHIF-POS\Project\Spg.SpengerSearch\Spg.SpengerSearch.DomainModel.Test\obj\Debug\net7.0\Spg.SpengerSearch.DomainModel.Test.genruntimeconfig.cache
 C:\HTL\Unterricht\SJ2223\3BHIF\Pos\SJ22-23-3BHIF-POS\Project\Spg.SpengerSearch\Spg.SpengerSearch.DomainModel.Test\obj\Debug\net7.0\ref\Spg.SpengerSearch.DomainModel.Test.dll
+C:\HTL\Unterricht\SJ2223\3BHIF\Pos\SJ22-23-3BHIF-POS\Project\Spg.SpengerSearch\Spg.SpengerSearch.DomainModel.Test\bin\Debug\net7.0\Bogus.dll

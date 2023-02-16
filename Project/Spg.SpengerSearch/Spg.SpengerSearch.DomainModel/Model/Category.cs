@@ -12,10 +12,10 @@ namespace Spg.SpengerSearch.DomainModel.Model
         public string Name { get; set; }
         public DateTime ExiryDate { get; set; }
 
-        public int CategoryTypeNavigationId { get; private set; } = default!;
+        public int CategoryTypeNavigationId { get; private set; }
         public CategoryType CategoryTypeNavigation { get; private set; } = default!;
 
-        public int ShopNavigationId { get; private set; } = default!;
+        public int ShopNavigationId { get; private set; }
         public Shop ShopNavigation { get; private set; } = default!;
 
 
@@ -31,6 +31,5 @@ namespace Spg.SpengerSearch.DomainModel.Model
             ExiryDate = exiryDate;
             ShopNavigation = shop;
         }
-
     }
 }

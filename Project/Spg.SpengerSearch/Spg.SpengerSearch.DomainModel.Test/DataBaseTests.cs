@@ -64,7 +64,7 @@ namespace Spg.SpengerSearch.DomainModel.Test
 
             // Assert (wir wollen prüpfen, ob der Datenbsatz in der DB gelandet ist)
             int actual = db.Shops.Count();
-            Assert.Equal(actual, 1);
+            Assert.Equal(1, actual);
         }
     }
 }

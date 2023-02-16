@@ -48,16 +48,15 @@ namespace Spg.SpengerSearch.DomainModel.Infrastructure
         {
             // Alle zusätzlichen Infos um aus den Entities eine DB zu erstellen.
             //modelBuilder.Entity<Product>().HasKey(new Product().GetType().GetProperties().SingleOrDefault(p => p.Name == "Description").Name);
-            modelBuilder.Entity<Product>().HasKey(p => p.Description);
+            modelBuilder.Entity<Product>().HasKey(p => new { p.Description, p.Ean13 } );
             modelBuilder.Entity<CategoryType>().HasKey(p => p.Key);
             modelBuilder.Entity<Customer>().OwnsOne(p => p.Address);
             modelBuilder.Entity<Shop>().OwnsOne(p => p.Address);
 
-            modelBuilder.Entity<Category>().HasMany(c => c.Products);
-            modelBuilder.Entity<Product>().HasOne(p => p.CategoryNavigation);
+            //modelBuilder.Entity<Category>().HasMany(c => c.Products);
+            //modelBuilder.Entity<Product>().HasOne(p => p.CategoryNavigation);
 
             modelBuilder.Entity<Product>().HasIndex(p => new { p.Description, p.Ean13 });
-
         }
 
 

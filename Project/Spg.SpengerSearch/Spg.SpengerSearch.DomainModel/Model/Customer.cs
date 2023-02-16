@@ -19,8 +19,11 @@ namespace Spg.SpengerSearch.DomainModel.Model
         public DateTime? RegistrationDateTime { get; private set; }
         public string SocialSecurityNumber { get; private set; } = string.Empty;
         public Address Address { get; set; } = default!;
+        public string FullName => $"{FirstName} {LastName}";
 
-        protected Customer()
+        public string GetFullName() => $"{FirstName} {LastName}";
+
+        private Customer()
         { }
         public Customer(GenderTypes gender, string firstName, string lastName, string eMail, DateTime? registrationDateTime, string socialSecurityNumber)
         {
