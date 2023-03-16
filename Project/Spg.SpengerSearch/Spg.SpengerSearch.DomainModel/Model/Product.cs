@@ -17,11 +17,12 @@ namespace Spg.SpengerSearch.DomainModel.Model
         public DateTime? DeliveryDate { get; set; }
         public decimal Price { get; set; }
 
+        public int CategoryNavigationId { get; }
         public Category CategoryNavigation { get; private set; } = default!;
 
         protected Product()
         { }
-        public Product(string name, string ean13, int stock, DateTime expiryDate, DateTime? deliveryDate, decimal price)
+        public Product(string name, string ean13, int stock, DateTime expiryDate, DateTime? deliveryDate, decimal price, Category categoryNavigation)
         {
             Description = name;
             Ean13 = ean13;
@@ -29,6 +30,8 @@ namespace Spg.SpengerSearch.DomainModel.Model
             ExpiryDate = expiryDate;
             DeliveryDate = deliveryDate;
             Price = price;
+            CategoryNavigation = categoryNavigation;
+            CategoryNavigationId = categoryNavigation.Id;
         }
     }
 }

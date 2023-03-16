@@ -68,34 +68,38 @@ namespace Spg.SpengerSearch.DomainModel.Infrastructure
             {
                 s.Name = f.Company.CompanyName();
                 s.CompanySuffix = f.Company.CompanySuffix();
+                s.CatchPhrase = f.Company.CatchPhrase();
+                s.Bs = f.Company.Bs();
+                s.Address = new Address()
+                {
+                    City = f.Address.City(),
+                    BuildingNumber =
+                    f.Address.BuildingNumber(),
+                    StreetName =
+                    f.Address.StreetName(),
+                    Zip = f.Address.ZipCode()
+                };
             })
             .Generate(10);
 
-            Shops.AddRange(shops); // Generiert 10 Insert-Queries
-            SaveChanges(); // Speichert alle Shops in die DB (Tranbsaction)
+            Shops.AddRange(shops);      // Generiert 10 Insert-Queries
+            SaveChanges();              // Speichert alle Shops in die DB (Tranbsaction)
 
-            string[] categoryNames = new Faker().Commerce.Categories(20);
-
-            List<CategoryType> categoryTypes = new(); // TODO: Durch Faker ersetzen
+            string[] categoryNames = new Faker().Commerce.Categories(200);
 
             List<Category> categories = new Faker<Category>()
                 .CustomInstantiator(f =>
                 new Category(
-                    categoryTypes[1],
                     f.Random.ListItem(shops),
-                    f.Commerce.Categories(1).First(),
+                    f.Random.ArrayElement(categoryNames),
                     f.Date.Between(DateTime.Now.AddMonths(2), DateTime.Now.AddMonths(12))))
                 .Rules((f, c) =>
             {
-                //// Mit ArrayElement:
-                //c.Name = f.Random.ArrayElement(categoryNames);
 
-                //// Alternative:
-                //c.Name = f.Commerce.Categories(1).First();
             })
-            .Generate(10)
-            .GroupBy(c => c.Name)
-            .First()
+            .Generate(200)
+            //.GroupBy(c => c.Name)
+            //.First()
             .ToList();
 
             Categories.AddRange(categories);
@@ -111,10 +115,36 @@ namespace Spg.SpengerSearch.DomainModel.Infrastructure
                 {
                     s.FirstName = f.Name.FirstName(Bogus.DataSets.Name.Gender.Female);
                 }
+                s.LastName = f.Name.LastName();
+                s.EMail = f.Internet.Email();
+                s.SocialSecurityNumber = f.Random.Int(111111, 999999).ToString();
+                s.RegistrationDateTime = DateTime.Now;
+                s.Address = new Address()
+                {
+                    City = f.Address.City(),
+                    BuildingNumber = f.Address.BuildingNumber(),
+                    StreetName = f.Address.StreetName(),
+                    Zip = f.Address.ZipCode()
+                };
             })
             .Generate(50);
 
             Customers.AddRange(customers);
+            SaveChanges();
+
+            List<Product> products = new Faker<Product>().CustomInstantiator(f => new Product(
+                    f.Commerce.ProductName(),
+                    f.Commerce.Ean13(),
+                    f.Random.Int(0, 200),
+                    f.Date.Between(DateTime.Now.AddDays(5), DateTime.Now.AddDays(60)),
+                    f.Date.Between(DateTime.Now.AddDays(2), DateTime.Now.AddDays(30)),
+                    f.Random.Decimal(5M, 900M),
+                    f.Random.ListItem(categories)
+                )).Rules((f, s) => { })
+                .Generate(1000)
+                .ToList();
+
+            Products.AddRange(products);
             SaveChanges();
         }
     }

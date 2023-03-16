@@ -15,15 +15,15 @@ namespace Spg.SpengerSearch.DomainModel.Model
         public GenderTypes Gender { get; set; }
         public string FirstName { get; set; } = string.Empty;
         public string LastName { get; set; } = string.Empty;
-        public string EMail { get; private set; } = string.Empty;
-        public DateTime? RegistrationDateTime { get; private set; }
-        public string SocialSecurityNumber { get; private set; } = string.Empty;
+        public string EMail { get; set; } = string.Empty;
+        public DateTime? RegistrationDateTime { get; set; }
+        public string SocialSecurityNumber { get; set; } = string.Empty;
         public Address Address { get; set; } = default!;
         public string FullName => $"{FirstName} {LastName}";
 
         public string GetFullName() => $"{FirstName} {LastName}";
 
-        private Customer()
+        public Customer()
         { }
         public Customer(GenderTypes gender, string firstName, string lastName, string eMail, DateTime? registrationDateTime, string socialSecurityNumber)
         {

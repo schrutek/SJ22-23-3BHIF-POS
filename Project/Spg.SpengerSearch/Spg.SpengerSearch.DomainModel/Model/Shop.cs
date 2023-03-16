@@ -8,7 +8,7 @@ namespace Spg.SpengerSearch.DomainModel.Model
 {
     public class Shop
     {
-        protected Shop()
+        public Shop()
         { }
         public Shop(string companySuffix, string name, string location, string catchPhrase, string bs, Address address)
         {
