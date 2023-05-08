@@ -23,7 +23,7 @@ var result03 = db.Shops.SingleOrDefault(s => s.Id == 4711)
 
 var result04 = db.Shops.Where(s => s.Id == 12).FirstOrDefault();
 
-var result05 = db.Products.Where(p => p.Description.ToLower().StartsWith("a"));
+var result05 = db.Products.Where(p => p.Name.ToLower().StartsWith("a"));
 
 var result06 = db.Products.Any(p => p.DeliveryDate > new DateTime(2022, 01, 01));
 

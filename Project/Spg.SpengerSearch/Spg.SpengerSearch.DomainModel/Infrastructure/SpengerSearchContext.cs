@@ -3,12 +3,18 @@ using Microsoft.EntityFrameworkCore;
 using Spg.SpengerSearch.DomainModel.Model;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Spg.SpengerSearch.DomainModel.Infrastructure
 {
+    public interface IDBContext
+    {
+        // TODO: Alle Methoden festlegen, die DBContext enthält
+    }
+
     // 1. Von DbContext ableiten
     public class SpengerSearchContext : DbContext
     {
@@ -20,10 +26,10 @@ namespace Spg.SpengerSearch.DomainModel.Infrastructure
         public DbSet<CategoryType> CategoryTypes => Set<CategoryType>();
 
         // nur zur Erklärung
-        public DbSet<CategoryType> CategoryTypes2
-        {
-            get { return base.Set<CategoryType>(); }
-        }
+        //public DbSet<CategoryType> CategoryTypes2
+        //{
+        //    get { return base.Set<CategoryType>(); }
+        //}
 
 
         // 3. Constructors
@@ -42,13 +48,14 @@ namespace Spg.SpengerSearch.DomainModel.Infrastructure
             {
                 optionsBuilder.UseSqlite("Data Source=SpengerSearch.db");
             }
+            //optionsBuilder.LogTo(message => Debug.WriteLine(message));
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             // Alle zusätzlichen Infos um aus den Entities eine DB zu erstellen.
-            //modelBuilder.Entity<Product>().HasKey(new Product().GetType().GetProperties().SingleOrDefault(p => p.Name == "Description").Name);
-            modelBuilder.Entity<Product>().HasKey(p => new { p.Description, p.Ean13 } );
+            //modelBuilder.Entity<Product>().HasKey(new Product().GetType().GetProperties().SingleOrDefault(p => p.Name == "Name").Name);
+            modelBuilder.Entity<Product>().HasKey(p => new { p.Name, p.Ean13 } );
             modelBuilder.Entity<CategoryType>().HasKey(p => p.Key);
             modelBuilder.Entity<Customer>().OwnsOne(p => p.Address);
             modelBuilder.Entity<Shop>().OwnsOne(p => p.Address);
@@ -56,7 +63,9 @@ namespace Spg.SpengerSearch.DomainModel.Infrastructure
             //modelBuilder.Entity<Category>().HasMany(c => c.Products);
             //modelBuilder.Entity<Product>().HasOne(p => p.CategoryNavigation);
 
-            modelBuilder.Entity<Product>().HasIndex(p => new { p.Description, p.Ean13 });
+            modelBuilder.Entity<Product>().HasIndex(p => new { p.Name, p.Ean13 });
+
+            //modelBuilder.Entity<Product>().HasData(new List<Product>() { new Product("", "", 0, DateTime.) });
         }
 
 
@@ -92,12 +101,14 @@ namespace Spg.SpengerSearch.DomainModel.Infrastructure
                 new Category(
                     f.Random.ListItem(shops),
                     f.Random.ArrayElement(categoryNames),
-                    f.Date.Between(DateTime.Now.AddMonths(2), DateTime.Now.AddMonths(12))))
+                    f.Date.Between(DateTime.Now.AddMonths(2), DateTime.Now.AddMonths(12)),
+                    f.Random.Int(1, 5)
+                ))
                 .Rules((f, c) =>
             {
 
             })
-            .Generate(200)
+            .Generate(50)
             //.GroupBy(c => c.Name)
             //.First()
             .ToList();
@@ -139,7 +150,8 @@ namespace Spg.SpengerSearch.DomainModel.Infrastructure
                     f.Date.Between(DateTime.Now.AddDays(5), DateTime.Now.AddDays(60)),
                     f.Date.Between(DateTime.Now.AddDays(2), DateTime.Now.AddDays(30)),
                     f.Random.Decimal(5M, 900M),
-                    f.Random.ListItem(categories)
+                    f.Random.ListItem(categories),
+                    f.Random.Int(1, 5)
                 )).Rules((f, s) => { })
                 .Generate(1000)
                 .ToList();

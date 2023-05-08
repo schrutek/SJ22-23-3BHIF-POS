@@ -1,14 +1,25 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <OutputType>WinExe</OutputType>
-    <TargetFramework>net7.0-windows</TargetFramework>
-    <Nullable>enable</Nullable>
-    <UseWPF>true</UseWPF>
-  </PropertyGroup>
+	<PropertyGroup>
+		<OutputType>WinExe</OutputType>
+		<TargetFramework>net7.0-windows</TargetFramework>
+		<Nullable>enable</Nullable>
+		<UseWPF>true</UseWPF>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\Spg.SpengerSearch.DomainModel\Spg.SpengerSearch.DomainModel.csproj" />
-  </ItemGroup>
+	<ItemGroup>
+		<None Remove="Images\Category.png" />
+	</ItemGroup>
+	
+	<ItemGroup>
+		<ProjectReference Include="..\Spg.SpengerSearch.Application\Spg.SpengerSearch.CoreApplication.csproj" />
+		<ProjectReference Include="..\Spg.SpengerSearch.DomainModel\Spg.SpengerSearch.DomainModel.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Resource Include="Images\Category.png">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Resource>
+	</ItemGroup>
 
 </Project>

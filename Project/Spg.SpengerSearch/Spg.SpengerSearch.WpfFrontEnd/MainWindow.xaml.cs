@@ -1,19 +1,8 @@
-﻿using Spg.SpengerSearch.WpfFrontEnd.Helpers;
+﻿using Spg.SpengerSearch.CoreApplication;
+using Spg.SpengerSearch.DomainModel.Infrastructure;
+using Spg.SpengerSearch.WpfFrontEnd.Helpers;
 using Spg.SpengerSearch.WpfFrontEnd.ViewModel;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace Spg.SpengerSearch.WpfFrontEnd
 {
@@ -24,11 +13,20 @@ namespace Spg.SpengerSearch.WpfFrontEnd
     {
         public MainWindow()
         {
-            DatabaseUtilities.GenerateDbAndSeed();
-
+            // Muss sein, weil ist von XAML vorgegeben
             InitializeComponent();
 
-            DataContext = new MainWindowViewModel();
+            // Dependency Injection ist OK, weil DB wird im ViewModel benötigt
+            SpengerSearchContext db = new SpengerSearchContext(DatabaseUtilities.GenerateDbOptionsProductive());
+            // ACHTUNG!! Wegwerf-Code
+            DatabaseUtilities.GenerateDbAndSeed(db); // das hier sollte ja nur ein mal aufgerufen werden
+            // ACHTUNG!! Wegwerf-Code
+
+            DataContext = new MainWindowViewModel(
+                db,
+                new CategoryService(db));
+
+            // Für Donnerstag: IServiceCollection implementieren
         }
     }
 }

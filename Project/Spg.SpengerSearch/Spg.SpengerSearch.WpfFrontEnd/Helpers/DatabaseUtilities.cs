@@ -10,7 +10,7 @@ namespace Spg.SpengerSearch.WpfFrontEnd.Helpers
 {
     public static class DatabaseUtilities
     {
-        public static DbContextOptions GenerateDbOptions()
+        public static DbContextOptions GenerateDbOptionsProductive()
         {
             DbContextOptionsBuilder options = new DbContextOptionsBuilder();
             options.UseSqlite("Data Source=SpengerSearch.db");
@@ -18,9 +18,16 @@ namespace Spg.SpengerSearch.WpfFrontEnd.Helpers
             return options.Options;
         }
 
-        public static SpengerSearchContext GenerateDbAndSeed()
+        public static DbContextOptions GenerateDbOptionsTest()
         {
-            SpengerSearchContext db = new SpengerSearchContext(GenerateDbOptions());
+            DbContextOptionsBuilder options = new DbContextOptionsBuilder();
+            options.UseSqlite("Data Source=SpengerSearch_Test.db");
+
+            return options.Options;
+        }
+
+        public static SpengerSearchContext GenerateDbAndSeed(SpengerSearchContext db)
+        {
             db.Database.EnsureDeleted();
             db.Database.EnsureCreated();
             db.Seed();

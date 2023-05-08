@@ -1,0 +1,15 @@
+C:\HTL\Unterricht\SJ2223\3BHIF\Pos\SJ22-23-3BHIF-POS\Levenshtein\Levenshtein\bin\Debug\net7.0\Levenshtein.exe
+C:\HTL\Unterricht\SJ2223\3BHIF\Pos\SJ22-23-3BHIF-POS\Levenshtein\Levenshtein\bin\Debug\net7.0\Levenshtein.deps.json
+C:\HTL\Unterricht\SJ2223\3BHIF\Pos\SJ22-23-3BHIF-POS\Levenshtein\Levenshtein\bin\Debug\net7.0\Levenshtein.runtimeconfig.json
+C:\HTL\Unterricht\SJ2223\3BHIF\Pos\SJ22-23-3BHIF-POS\Levenshtein\Levenshtein\bin\Debug\net7.0\Levenshtein.dll
+C:\HTL\Unterricht\SJ2223\3BHIF\Pos\SJ22-23-3BHIF-POS\Levenshtein\Levenshtein\bin\Debug\net7.0\Levenshtein.pdb
+C:\HTL\Unterricht\SJ2223\3BHIF\Pos\SJ22-23-3BHIF-POS\Levenshtein\Levenshtein\obj\Debug\net7.0\Levenshtein.csproj.AssemblyReference.cache
+C:\HTL\Unterricht\SJ2223\3BHIF\Pos\SJ22-23-3BHIF-POS\Levenshtein\Levenshtein\obj\Debug\net7.0\Levenshtein.GeneratedMSBuildEditorConfig.editorconfig
+C:\HTL\Unterricht\SJ2223\3BHIF\Pos\SJ22-23-3BHIF-POS\Levenshtein\Levenshtein\obj\Debug\net7.0\Levenshtein.AssemblyInfoInputs.cache
+C:\HTL\Unterricht\SJ2223\3BHIF\Pos\SJ22-23-3BHIF-POS\Levenshtein\Levenshtein\obj\Debug\net7.0\Levenshtein.AssemblyInfo.cs
+C:\HTL\Unterricht\SJ2223\3BHIF\Pos\SJ22-23-3BHIF-POS\Levenshtein\Levenshtein\obj\Debug\net7.0\Levenshtein.csproj.CoreCompileInputs.cache
+C:\HTL\Unterricht\SJ2223\3BHIF\Pos\SJ22-23-3BHIF-POS\Levenshtein\Levenshtein\obj\Debug\net7.0\Levenshtein.dll
+C:\HTL\Unterricht\SJ2223\3BHIF\Pos\SJ22-23-3BHIF-POS\Levenshtein\Levenshtein\obj\Debug\net7.0\refint\Levenshtein.dll
+C:\HTL\Unterricht\SJ2223\3BHIF\Pos\SJ22-23-3BHIF-POS\Levenshtein\Levenshtein\obj\Debug\net7.0\Levenshtein.pdb
+C:\HTL\Unterricht\SJ2223\3BHIF\Pos\SJ22-23-3BHIF-POS\Levenshtein\Levenshtein\obj\Debug\net7.0\Levenshtein.genruntimeconfig.cache
+C:\HTL\Unterricht\SJ2223\3BHIF\Pos\SJ22-23-3BHIF-POS\Levenshtein\Levenshtein\obj\Debug\net7.0\ref\Levenshtein.dll

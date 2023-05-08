@@ -4,13 +4,17 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Spg.SpengerSearch.WpfFrontEnd"
+        xmlns:vm="clr-namespace:Spg.SpengerSearch.WpfFrontEnd.ViewModel"
+        xmlns:converters="clr-namespace:Spg.SpengerSearch.WpfFrontEnd.Converters"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800"
-        Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}">
+        Title="MainWindow" Height="500" Width="800"
+        Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}"
+        >
 
     <Window.Resources>
+        <converters:RatingConverter x:Key="ratingConverter"></converters:RatingConverter>
     </Window.Resources>
-    
+
     <Grid ShowGridLines="False">
         <Grid.RowDefinitions>
             <RowDefinition Height="40"></RowDefinition>
@@ -30,51 +34,96 @@
                 <ColumnDefinition Width="*"></ColumnDefinition>
             </Grid.ColumnDefinitions>
 
-            <ListBox x:Name="lstCategory" Grid.Row="0" Grid.Column="0" Margin="10" ItemsSource="{ Binding Path=Categories }">
+            <ListBox x:Name="lstCategory" Grid.Row="0" Grid.Column="0" Margin="10" 
+                     ItemsSource="{ Binding Path=Categories }"
+                     SelectedItem="{ Binding Path=SelectedCategory }"
+                     >
                 <ListBox.ItemTemplate>
                     <DataTemplate>
-                        <StackPanel Orientation="Horizontal" Margin="6">
-                            <TextBlock Text="{Binding Id}"></TextBlock>
-                            <TextBlock Text="{Binding Name}" Margin="10, 0, 0, 0"></TextBlock>
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="Images/Category.png" Width="32px" Height="32px"></Image>
+                            <StackPanel Orientation="Horizontal" Margin="6">
+                                <TextBlock Text="{Binding Id}"></TextBlock>
+                                <TextBlock Text="{Binding Name}" Margin="10, 0, 0, 0"></TextBlock>
+                                <TextBlock Text="{Binding Rating, Converter={StaticResource ratingConverter }, ConverterParameter=text}" Margin="10, 0, 0, 0"></TextBlock>
+                            </StackPanel>
                         </StackPanel>
                     </DataTemplate>
                 </ListBox.ItemTemplate>
             </ListBox>
 
-            <ListBox x:Name="lstProducts" Grid.Row="0" Grid.Column="1" Margin="0,10,10,10">
-                <ListBoxItem Content="asdadsasd"></ListBoxItem>
-                <ListBoxItem Content="asdadsasd"></ListBoxItem>
-                <ListBoxItem Content="asdadsasd"></ListBoxItem>
-                <ListBoxItem Content="asdadsasd"></ListBoxItem>
+            <ListBox x:Name="lstProducts" Grid.Row="0" Grid.Column="1" Margin="0,10,10,10"
+                     ItemsSource="{ Binding Path=Products }"
+                     SelectedItem="{ Binding Path=SelectedProduct }"
+                     >
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock>
+                            <Run Text="{Binding Path=Name}"></Run>
+                            <Run Text="{Binding Path=Ean}"></Run>
+                            <Run Text="{Binding Path=Stock}" FontWeight="Bold"></Run>
+                        </TextBlock>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
             </ListBox>
 
-            <StackPanel Grid.Row="0" Grid.Column="2" Margin="0,10,10,10">
-                <StackPanel Orientation="Horizontal">
-                    <TextBlock Width="120">Detail 1:</TextBlock>
-                    <TextBlock Width="250">Info 1:</TextBlock>
+            <StackPanel Grid.Row="0" Grid.Column="2" Orientation="Vertical">
+                <StackPanel Margin="0,10,10,10">
+                    <StackPanel Orientation="Horizontal" Margin="3">
+                        <TextBlock Width="120" Padding="3">EAN:</TextBlock>
+                        <TextBlock Text="{ Binding Path=SelectedProduct.Ean13 }" Width="250" Padding="3"></TextBlock>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="3">
+                        <TextBlock Width="120" Padding="3">Ablaufdatum:</TextBlock>
+                        <TextBlock Text="{ Binding Path=SelectedProduct.ExpiryDate, StringFormat={}{0:dd/MM/yyyy} }" Width="250" Padding="3"></TextBlock>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal" Margin="3">
+                        <TextBlock Width="120" Padding="3">Name:</TextBlock>
+                        <TextBox x:Name="txtName" Text="{ Binding Path=SelectedProduct.Name }" Width="250" Padding="3"></TextBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="3">
+                        <TextBlock Width="120" Padding="3">Stückzahl im Lager:</TextBlock>
+                        <TextBox x:Name="txtStock" Text="{ Binding Path=SelectedProduct.Stock }" Width="250" Padding="3"></TextBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="3">
+                        <TextBlock Width="120" Padding="3">Lieferdatum:</TextBlock>
+                        <TextBox x:Name="txtExpiryDate" Text="{ Binding Path=SelectedProduct.DeliveryDate, StringFormat={}{0:dd/MM/yyyy} }" Width="250" Padding="3"></TextBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="3">
+                        <TextBlock Width="120" Padding="3">Preis (EUR):</TextBlock>
+                        <TextBox x:Name="txtPrice" Text="{ Binding Path=SelectedProduct.Price, StringFormat='{}{0:#,#.00}' }" Width="250" Padding="3"></TextBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="3">
+                        <TextBlock Width="120" Padding="3">Bewertung:</TextBlock>
+                        <TextBox x:Name="txtEan" Text="{ Binding Path=SelectedProduct.Rating, Converter={StaticResource ratingConverter}, ConverterParameter=zahl }" Width="250" Padding="3"></TextBox>
+                    </StackPanel>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal">
-                    <TextBlock Width="120">Detail 1:</TextBlock>
-                    <TextBlock Width="250">Info 1:</TextBlock>
-                </StackPanel>
-                <StackPanel Orientation="Horizontal">
-                    <TextBlock Width="120">Detail 1:</TextBlock>
-                    <TextBlock Width="250">Info 1:</TextBlock>
-                </StackPanel>
-                <StackPanel Orientation="Horizontal">
-                    <TextBlock Width="120">Detail 1:</TextBlock>
-                    <TextBlock Width="250">Info 1:</TextBlock>
+                    <Button Padding="8" Width="112" Margin="10">Neu</Button>
+                    <Button Padding="8" Width="112" Margin="0,10,10,10">Ändern</Button>
+                    <Button Padding="8" Width="112" Margin="0,10,0,10">Löschen</Button>
                 </StackPanel>
             </StackPanel>
 
-            <TextBlock Grid.Row="1" Grid.Column="0" Margin="10,10">Anzahl Kategories: n</TextBlock>
-            <TextBlock Grid.Row="1" Grid.Column="1" Margin="10,10">Anzahl gefundener Produkte: n</TextBlock>
+            <TextBlock Grid.Row="1" Grid.Column="0" Margin="10,10">
+                <Run>Anzahl Kategorien: </Run>
+                <Run Text="{ Binding Path=CategoryCount, Mode=OneWay }"></Run>
+                <Run>!</Run>
+            </TextBlock>
+            <TextBlock Grid.Row="1" Grid.Column="1" Margin="10,10">
+                <Run>Anzahl gefundener Produkte: </Run>
+                <Run Text="{ Binding Path=ProductCount, Mode=OneWay}"></Run>
+                <Run>!</Run>
+            </TextBlock>
         </Grid>
 
         <StackPanel Grid.Row="1" Grid.Column="0" Orientation="Horizontal" Margin="10">
             <TextBlock>Filterkriterien:</TextBlock>
 
-            <ComboBox Width="160" Margin="10,0,10,0" ItemsSource="{ Binding Path=Categories }">
+            <ComboBox Width="160" Margin="10,0,10,0"
+                      ItemsSource="{ Binding Path=Shops }" 
+                      SelectedItem="{ Binding Path=SelectedShop }">
                 <ComboBox.ItemTemplate>
                     <DataTemplate>
                         <StackPanel Orientation="Horizontal" Margin="6">
@@ -84,11 +133,13 @@
                     </DataTemplate>
                 </ComboBox.ItemTemplate>
             </ComboBox>
-            
+
             <TextBlock>Preis:</TextBlock>
-            <TextBox Width="200" Margin="10,0,10,0"></TextBox>
+            <TextBox Width="185" Margin="10,0,10,0" ></TextBox>
             <TextBlock>Ablaufdatum:</TextBlock>
             <TextBox Width="160" Margin="10,0,10,0"></TextBox>
+            <Button x:Name="btnGo" Width="40">Los</Button>
         </StackPanel>
+
     </Grid>
 </Window>

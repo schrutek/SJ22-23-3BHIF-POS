@@ -20,7 +20,7 @@ namespace Spg.SpengerSearch.DomainModel.Model
             Address = address;
         }
 
-        public int Id{ get; private set; } // Id..PK ; int,long .. AutoIncrement
+        public int Id { get; private set; } // Id..PK ; int,long .. AutoIncrement
         public string CompanySuffix { get; set; } = string.Empty;
         public string Name { get; set; } = string.Empty;
         public string Location { get; set; } = string.Empty;
